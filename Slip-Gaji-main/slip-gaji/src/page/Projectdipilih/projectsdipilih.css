@@ -1,0 +1,184 @@
+.content-wrapper > h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 61px;
+}
+
+.table-section {
+    position: relative;
+    top: 50%;
+    grid-template-rows: 44px 1fr;
+    width: 90%;
+    max-height: 50%;
+    border-collapse: 0;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    
+}
+
+.table-section .header {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: left;
+    align-content: left;
+    position: relative;
+}
+
+table {
+    position: fixed;
+    z-index: 1;
+    left: 55%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    border-collapse: 0;
+    border-spacing: 0;
+    border-radius: 12px 12px 12px 12px;
+    overflow: hidden;
+    background: #fafafa; 
+    text-align: left;
+}
+th,td {
+    padding: 8px 10px;
+}
+
+th {
+    background: #e0e0ee;
+    color: fafafa;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+td {
+    font-family: 'Open Sans' ,sans-serif;
+}
+
+tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+
+.header {}
+
+.table-section .header a {
+    background: #BD3913;
+    border-radius: 25px;
+    padding: 12px 20px;
+    width: 92px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.header {}
+
+.header select {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #DBDBDB;
+    width: 345px;
+    justify-self: flex-start;
+    height: 36px;
+    margin: 2px 6px;
+}
+
+.header label {
+    position: relative;
+    left: 120%;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.header label input[type="text"] {
+    width: 161px;
+    height: 36px;
+    left: 1691px;
+    top: 305px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.table-input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    text-align: center;
+}
+
+-------------------pagination------------------------
+.pagination {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: xx-small;
+}
+
+.pagination td li {
+    display: inline;
+}
+
+.pagination td li a {
+    display: inline-block;
+    text-decoration: wavy;
+    padding: 5px 10px;
+    color: #000;
+}
+
+.pagination td li a {
+    border-radius: 5px ;
+    border-spacing: 0;
+}
+
+.pagination active {
+    background-color: #cfcfe2;
+    color: #eeeeee;
+
+}
+
+-------------------action------------------
+
+.button {
+    border-spacing: 10px;
+}
+.btn-hapus {
+    background: rgb(185, 5, 5);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 3px 5px;
+    border: 1px solid rgb(202, 202, 202);
+    content: "\00D7";
+    float: center;
+    cursor: pointer;
+    
+}
+.btn-reset {
+    background: rgb(7, 72, 56);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 3px 5px;
+    border: 1px solid rgb(202, 202, 202);
+    content: "\00D7";
+    float: center;
+    cursor: pointer;
+}

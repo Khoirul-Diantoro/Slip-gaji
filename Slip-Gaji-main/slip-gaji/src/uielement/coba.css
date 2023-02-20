@@ -1,0 +1,59 @@
+.file-upload1 .uploadfile-inside {
+    display: flex;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 6px;
+    gap: 10px;
+}
+
+.uploadfile-section .file-inputs {
+    position: relative;
+    margin-bottom: 5px;
+    max-width: 122px;
+    max-height: 80px;
+}
+
+.file-inputs input {
+    position: relative;
+    background: red;
+    max-width: 100px;
+    width: 152px;
+    height: 44px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.file-inputs button {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #C4C4C4;
+}
+
+.uploadfile-section {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.uploadfile-inside > img {
+    width: 80px;
+    height: 60px;
+}

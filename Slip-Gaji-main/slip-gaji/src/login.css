@@ -1,0 +1,234 @@
+/* Regular Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/font/Montserrat-Regular.ttf");
+}
+
+/* Medium (500) Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/font/Montserrat-Medium.ttf");
+    font-weight: 500;
+
+}
+
+/* SemiBold (600) Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/font/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+}
+
+/* Bold Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/font/Montserrat-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Pembungkus */
+.wrapper {
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/img/Rectangle96.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+}
+
+.login-title h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 49px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    /* T-Black */
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-box {
+    width: 400px;
+    height: 400px;
+    background: #FFFCFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.login-box .login-title {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+}
+
+
+
+.login-title img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.login-input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-input .rmbr-me {
+    display: flex;
+    width: 80%;
+    padding: 2px 2px;
+    align-items: center;
+}
+.input-text h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    /* T-Black */
+    color: #000000;
+    text-align: left;
+}
+
+.input-text .form-control {
+    box-sizing: border-box;
+    height: 39px;
+
+    /* T-Black */
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1px 7px;
+}
+
+
+.login-input .input-text {
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    padding: 3px 2px;
+}
+.rmbr-me input.form-control {
+    display: none;
+}
+.rmbr-me .checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    border: 2px solid #326E62;
+    box-sizing: border-box;
+}
+
+.rmbr-me .checkmark.active {
+     background: #326E62;
+}
+
+
+
+
+.rmbr-me h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: black;
+    margin-left: 7px;
+
+}
+.rmbr-me h3.active {
+     /* T-Will */
+     color: #326E62;
+     margin-left: 7px;
+}
+
+
+
+.login-btn {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn a,.login-btn button  {
+    outline: none;
+    border: none;
+
+
+    background: #BD3913;
+    border-radius: 30px;
+    width: 80%;
+    height: 88%;
+    text-decoration: none;
+    /* display: flex; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    /* P-Soapstone */
+    color: #FFFCFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-box {
+    width: 450px;
+    max-width: 450px;
+    height: 450px;
+    max-height: 450px;
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+}
+
+/* End Pembungkus */
+@media only screen and (max-width: 992px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+    .logo-box {
+        width: 300px;
+        height: 300px;
+    }
+}

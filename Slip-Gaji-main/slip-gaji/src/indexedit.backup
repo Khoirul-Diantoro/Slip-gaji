@@ -1,0 +1,119 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./login";
+import Dashboard from "./dashboard";
+import Sidebar from "./sidebar/sidebar";
+import Editprofile from "./page/Editprofile/Editprofile";
+import Pegawai from "./page/Pegawai/pegawai";
+import AddPegawai from "./page/Pegawai/tambahpegawai";
+import Edit from "./page/Pegawai/Editpegawai";
+import Slipgaji from './page/Slip Gaji/Slipgaji';
+import Editslipgaji from './page/Slip Gaji/Editslipgaji';
+import Tambahslipgaji from './page/Slip Gaji/Tambahslipgaji';
+import Detailslipgaji from "./page/Slip Gaji/Detailslipgaji";
+import Slipgajipegawai from "./page/Pegawai/Slipgajipegawai";
+import Mutasiproject from "./page/Mutasiproject/Mutasiproject";
+import Tambahmutasiproject from "./page/Mutasiproject/Tambahmutasiproject";
+import Editmutasiproject from "./page/Mutasiproject/Editmutasiproject";
+
+import ListProject from "./page/Project/ListProject";
+import Tambahproject from "./page/Project/TambahProject";
+import EditProject from "./page/Project/EditProject";
+import Delete from "./uielement/Delete";
+import DeletePegawai from "./page/Pegawai/DeletePegawai";
+import DeleteProject from "./page/Project/DeleteProject";
+import DeleteMutasi from "./page/Mutasiproject/DeleteMutasi";
+import DashboardKaryawan from "./page/Nonadmin/DashboardKaryawan";
+import SidebarPegawai from "./sidebar/SidebarPegawai";
+import SlipgajiKaryawan from "./page/Nonadmin/SlipgajiKaryawan";
+import EditprofilePegawai from "./page/Nonadmin/EditProfilePegawai";
+import Coba from "./uielement/Coba";
+
+
+
+function App() {
+  
+    return (
+        <Router>
+            <Routes>
+           
+                <Route path="/login" element={<Login />} />
+
+                <Route path="/" element={<Sidebar />}>
+                    
+
+
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="editprofile" element={<Editprofile />} />
+                    {/* Pegawai */}
+                    <Route path="pegawai" element={<Pegawai />}>
+                        <Route path="add" element={<AddPegawai />} />
+                        <Route path="edit/:id" element={<Edit />} />
+
+                        <Route path="mutasi/:id" element={<Edit />} />
+                        <Route path="delete/:id" element={<DeletePegawai />} />
+
+
+
+                    </Route>
+
+                    <Route path="pegawai/slipgaji/:id" element={<Slipgajipegawai />} />
+                    {/* Slip Gaji */}
+                    <Route path="slipgaji" element={<Slipgaji />}>
+                        <Route path="add" element={<Tambahslipgaji />} />
+                        <Route path="edit/:id" element={<Editslipgaji />} />
+
+
+                    </Route>
+
+
+                    <Route path="slipgaji/detail/:id" element={<Detailslipgaji />} />
+                    {/* Mutasiproject */}
+                    <Route path="mutasiproject/:idpegawai" element={<Mutasiproject />}>
+                        <Route path="add" element={<Tambahmutasiproject />} />
+                        <Route path="edit/:id" element={<Editmutasiproject />} />
+                        <Route path="delete/:id" element={<DeleteMutasi />} />
+
+                    </Route>
+                    {/* Project */}
+                    <Route path="project" element={<ListProject />}>
+                        <Route path="add" element={<Tambahproject />} />
+                        <Route path="edit/:id" element={<EditProject />} />
+                        <Route path="delete/:id" element={<DeleteProject />} />
+
+
+                    </Route>
+
+
+
+
+
+
+
+                </Route>
+
+                {/* Akses  Dashboard karyawan salin localhost:3000/karyawan/dashboard */}
+                <Route path="/karyawan" element={<SidebarPegawai />}>
+                   
+                    <Route path="dashboard" element={<DashboardKaryawan />} />
+                     {/* Akses  Slip Gaji karyawan localhost:3000/karyawan/slipgaji */}
+                    <Route path="slipgaji" element={<SlipgajiKaryawan />}/>
+                    <Route path="edit/:id" element={<EditprofilePegawai />}/>
+              
+
+
+                </Route>
+                <Route path="/hello" element={<Coba />} />
+
+                <Route path="*" element={<Navigate to="/login" />} />
+
+            </Routes>
+        </Router>
+
+
+    );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
